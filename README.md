@@ -63,8 +63,11 @@ Step 1: Object Detection using YOLO
    *YOLO-format annotation files (.txt)
 
 yolo_output/
+
  ├── images/
+ 
  ├── labels/
+ 
  └── yolo_predictions.zip
 
 
@@ -87,7 +90,9 @@ Step 2: Ground Truth Creation using CVAT
 CVAT Export ZIP:
 
 ground_truth_dataset.zip
+
  ├── images/
+ 
  └── labels/
 
  
