@@ -60,6 +60,7 @@ Step 2: Ground Truth Creation using CVAT
 *CVAT exports annotations in YOLO format.
 
 CVAT Export ZIP:
+
 ground_truth_dataset.zip
  ├── images/
  └── labels/
