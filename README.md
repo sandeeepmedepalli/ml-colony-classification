@@ -36,13 +36,14 @@ Step 1: Object Detection using YOLO
    *Class labels
 
    *YOLO-format annotation files (.txt)
-
-
 yolo_output/
  ├── images/
  ├── labels/
  └── yolo_predictions.zip
- ---------------------------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------------------------
 Step 2: Ground Truth Creation using CVAT
 
 *The YOLO output ZIP is uploaded into CVAT.
@@ -56,12 +57,12 @@ Step 2: Ground Truth Creation using CVAT
   *Class labels are corrected if needed
 
 *CVAT exports annotations in YOLO format.
-
-
 CVAT Export ZIP:
 ground_truth_dataset.zip
  ├── images/
  └── labels/
+
+ 
 -----------------------------------------------------------------------------------------------
 Step 3: Parsing CVAT Ground Truth
 
@@ -79,8 +80,10 @@ Step 3: Parsing CVAT Ground Truth
   *label_name
 
   *label_idx
-
 This DataFrame is the single source of truth used by all datasets.
+
+
+
 ------------------------------------------------------------------------------------------------
 Step 4: Patch Extraction from Bounding Boxes
 
@@ -98,8 +101,10 @@ Step 4: Patch Extraction from Bounding Boxes
 
 Implemented in: 
 ColonyPatchDatasetCached / ColonyPatchDatasetFixed
-
 This ensures consistent tensor shapes for batching.
+
+
+
 -----------------------------------------------------------------------------------------------
 Step 5: 10-Class Public Dataset Training
 
@@ -131,10 +136,11 @@ Step 6: Transfer Learning to In-House Dataset
       *Entire network unfrozen
 
       *Fine-tuned on in-house data
-
-
 Best model saved as:
     best_finetuned_on_newtest.pt
+
+
+
 -----------------------------------------------------------------------------------------------
 Step 7: Evaluation
 
@@ -159,5 +165,4 @@ Quantitative Evaluation
   *Green boxes → correctly classified test patches (TP)
 
   *Yellow boxes → misclassified test patches (FN)
-
 This matches the professor’s requirement to visually show detections and misclassifications.
