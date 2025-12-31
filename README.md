@@ -15,22 +15,40 @@ Visualization & Evaluation using confusion matrices and classification reports
 Overall workflow:
 
 Raw Images
+
    ↓
+   
 YOLO Object Detection
+
    ↓
+   
 YOLO Output ZIP
+
    ↓
+   
 CVAT (Ground Truth Annotation)
+
    ↓
+   
 Ground Truth ZIP (YOLO format)
+
    ↓
+   
 Patch Extraction + Dataset Creation
+
    ↓
+   
 10-Class Public Model Training
+
    ↓
+   
 Transfer Learning + Fine-Tuning (4-Class In-House)
+
    ↓
+   
 Evaluation + Visualization
+
+
 ---------------------------------------------------------------------------------------------
 Step 1: Object Detection using YOLO
 
