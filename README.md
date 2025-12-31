@@ -1,9 +1,16 @@
 This project implements a complete computer-vision pipeline for colony classification using:
+
 YOLO for initial object detection
+
 CVAT for ground-truth annotation refinement
+
 PyTorch (ResNet-18) for classification
+
 Transfer Learning from a public dataset to an in-house dataset
+
 Visualization & Evaluation using confusion matrices and classification reports
+
+
 --------------------------------------------------------------------------------------------
 Overall workflow:
 
