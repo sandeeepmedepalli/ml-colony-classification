@@ -36,6 +36,7 @@ Step 1: Object Detection using YOLO
    *Class labels
 
    *YOLO-format annotation files (.txt)
+
 yolo_output/
  ├── images/
  ├── labels/
@@ -57,6 +58,7 @@ Step 2: Ground Truth Creation using CVAT
   *Class labels are corrected if needed
 
 *CVAT exports annotations in YOLO format.
+
 CVAT Export ZIP:
 ground_truth_dataset.zip
  ├── images/
@@ -80,6 +82,7 @@ Step 3: Parsing CVAT Ground Truth
   *label_name
 
   *label_idx
+
 This DataFrame is the single source of truth used by all datasets.
 
 
@@ -100,6 +103,7 @@ Step 4: Patch Extraction from Bounding Boxes
    *Convert back to RGB (for ResNet compatibility)
 
 Implemented in: 
+
 ColonyPatchDatasetCached / ColonyPatchDatasetFixed
 This ensures consistent tensor shapes for batching.
 
@@ -111,9 +115,10 @@ Step 5: 10-Class Public Dataset Training
 A ResNet-18 model is trained on a public 10-class dataset.
 
 Best model is saved as:
-resnet18_pretrained_10class.pt
 
 resnet18_pretrained_10class.pt
+
+
 -----------------------------------------------------------------------------------------------
 Step 6: Transfer Learning to In-House Dataset
 
@@ -156,7 +161,7 @@ Quantitative Evaluation
 
   *4-class in-house fine-tuned model
 
-🖼 Qualitative Visualization
+Qualitative Visualization
 
 *Per-image visualization:
 
@@ -165,4 +170,5 @@ Quantitative Evaluation
   *Green boxes → correctly classified test patches (TP)
 
   *Yellow boxes → misclassified test patches (FN)
+  
 This matches the professor’s requirement to visually show detections and misclassifications.
